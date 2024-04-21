@@ -1,34 +1,16 @@
-import logo from "./logo.svg";
+import { useState } from "react";
 import "./App.css";
-import Counter from "./counter";
-import Click from "./click";
 
 function App() {
+  const [counter, setCounter] = useState(0)
   return (
-    <div className="App">
-      <input
-        type="text"
-        placeholder="Enter your name"
-        id="name"
-        readOnly
-        name="john"
-        value="inputText"
-      />
-      <button type="submit" id="btn">
-        Click me
-      </button>
-      
-      <footer id="foot">Hello Testing</footer>
+    <>
+      <input type="email" placeholder="xyz@gmail.com" />
+     
 
-      <br />
-      <br />
-      <br />
-      Learn React
-
-      <Counter />
-
-      <Click />
-    </div>
+      <h3> {counter} </h3>
+      <button onClick={() => setCounter(counter + 1)}> Increment </button>
+    </>
   );
 }
 

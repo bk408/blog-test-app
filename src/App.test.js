@@ -1,8 +1,48 @@
-import { render, screen } from "@testing-library/react";
+ import { fireEvent, render, screen } from "@testing-library/react";
 
 import App from "./App";
+ 
 
-test("render the app", () => {
+
+
+test("Email input testing", () => {
+  render(<App />)
+  const checkEmail = screen.getByRole("textbox");
+  const checkPlaceholder = screen.getByPlaceholderText("xyz@gmail.com");
+  expect(checkEmail).toBeInTheDocument();
+  expect(checkPlaceholder).toBeInTheDocument();
+})
+
+
+test("button click testing", () => {
+  render(<App />);
+  const checkButton = screen.getByText("Increment");
+  fireEvent.click(checkButton);
+  const counterElement = screen.getByText("1"); // Assuming the counter starts from 0
+  expect(counterElement).toBeInTheDocument();
+});
+
+/*test("button click testing", () => {
+  render(<App />)
+  const checkButton = screen.getByText("Increment");
+  fireEvent.click(checkButton);
+  expect(checkButton.textContent).toBe(0);
+})*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*test("render the app", () => {
     render(<App />)
     const linkElement = screen.getByText(/Learn ReAct/i);
     expect(linkElement).toBeInTheDocument();
@@ -62,7 +102,7 @@ describe("footer testing", () => {
         expect(checkFooter).toBeInTheDocument();
         expect(checkFooter).toHaveAttribute("id", "foot");
     })
-})
+})*/
 
 
 
