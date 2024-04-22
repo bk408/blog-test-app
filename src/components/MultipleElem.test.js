@@ -13,7 +13,7 @@ test("multiple input testing", () => {
     render(<MultipleElem />)
     const inputTest1 = screen.getByRole("textbox", { name: "Name" });
     const inputTest2 = screen.getByRole("textbox", { name: "Age" });
-    
+
     expect(inputTest1).toBeInTheDocument()
     expect(inputTest2).toBeInTheDocument()
 })
