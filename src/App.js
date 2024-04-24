@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import FuncComp from "./FuncComp";
 import Title from "./components/Title";
+import Query from "./pages/Query";
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <button onClick={() => setCounter(counter + 1)}> Increment </button>
       <FuncComp />
       <Title />
+      <Query />
     </>
   );
 }
