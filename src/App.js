@@ -5,6 +5,7 @@ import Title from "./components/Title";
 import Query from "./pages/Query";
 import Find from "./pages/Find";
 import OnChangeEvent from "./utils/OnChangeEvent";
+import NewUser from "./utils/NewUser";
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -15,6 +16,8 @@ function App() {
 
       <h3> {counter} </h3>
       <button onClick={() => setCounter(counter + 1)}> Increment </button>
+
+      <NewUser name={"Hello BK408"} />
 
       <OnChangeEvent />
  {  /*   <FuncComp />
