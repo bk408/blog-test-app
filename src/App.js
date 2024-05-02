@@ -4,6 +4,7 @@ import FuncComp from "./FuncComp";
 import Title from "./components/Title";
 import Query from "./pages/Query";
 import Find from "./pages/Find";
+import OnChangeEvent from "./utils/OnChangeEvent";
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -14,11 +15,15 @@ function App() {
 
       <h3> {counter} </h3>
       <button onClick={() => setCounter(counter + 1)}> Increment </button>
-      <FuncComp />
+
+      <OnChangeEvent />
+ {  /*   <FuncComp />
       <Title />
       <Query />
 
-      <Find />
+  <Find /> */ }
+      
+
     </>
   );
 }
