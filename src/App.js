@@ -6,6 +6,7 @@ import Query from "./pages/Query";
 import Find from "./pages/Find";
 import OnChangeEvent from "./utils/OnChangeEvent";
 import NewUser from "./utils/NewUser";
+import Api from "./utils/Api";
 
 function App() {
   const [counter, setCounter] = useState(0)
@@ -18,6 +19,8 @@ function App() {
       <button onClick={() => setCounter(counter + 1)}> Increment </button>
 
       <NewUser name={"Hello BK408"} />
+
+      <Api />
 
       <OnChangeEvent />
  {  /*   <FuncComp />

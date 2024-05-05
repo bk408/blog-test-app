@@ -10,3 +10,13 @@ from an api we got some result, might be response is short or larger or may be t
 this issue msw create a dummy data of response and start testing on it.
 
 Note: react-testing-library is also used msw in their official documentation and they recommend to use MSW
+
+
+# API testing with MSW process
+
+1. install MSW
+2. make mock service folder
+3. make server file
+4. make server handler file 
+5. write code for api testing
+6. call server in test setup file
