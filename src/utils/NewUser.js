@@ -1,5 +1,6 @@
 import React from 'react'
 
+// props testing
 const NewUser = ({name}) => {
   return (
       <div>

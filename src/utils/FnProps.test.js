@@ -3,8 +3,10 @@ import userEvent from "@testing-library/user-event";
 import FnProps from "./FnProps";
 
 
+// userEvent helps to perform testing on event listeners
 
-test("Functional Props Testing", async() => {
+
+test("Functional Props Testing", async () => {
     // mocking the function
     const testFunction = jest.fn(); 
     userEvent.setup();
